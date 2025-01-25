@@ -72,14 +72,10 @@ public class Projectile : MonoBehaviour
     {
         bubble.HitByProjectile(this);
 
-
         int points = bubble.points + chainBonus;
-        bool fallingBonus = Mathf.Sign(initialVelocity.y * rb.linearVelocity.y) == -1f;
-        if (fallingBonus) points *= GameSettings.fallingNutMultiplier;
-
         ScoreTracker.IncreaseScore(points, bubble.transform.position);
 
-        chainBonus += GameSettings.chainingBonus;
+        chainBonus += GameSettings.instance.chainingBonus;
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {

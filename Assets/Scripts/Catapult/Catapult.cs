@@ -105,8 +105,10 @@ public class Catapult : MonoBehaviour
             multiplier = ProjectileChambered.VelocityMultiplier;
         }
         Vector3 delta = LauncherDelta();
-        Vector3 direction = -delta / maxStretchDistance;
-        return direction * multiplier * maxVelocity;
+        Vector3 direction = -delta.normalized;
+        float factor = delta.magnitude / maxStretchDistance;
+        factor = Mathf.Sqrt(factor);
+        return direction * factor * multiplier * maxVelocity;
     }
 
     private void UpdateLineRenderer()

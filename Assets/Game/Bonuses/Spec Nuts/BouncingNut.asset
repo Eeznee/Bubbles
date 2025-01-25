@@ -1,0 +1,16 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: BouncingNut
+  m_EditorClassIdentifier: Assembly-CSharp::SpecialNutsBonus
+  projectile: {fileID: 4007594502755831881, guid: d69043fd88bd66043b8f98c50753d088, type: 3}
+  count: 3

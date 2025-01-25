@@ -24,5 +24,7 @@ public class ClusterProjectile : Projectile
             sub.transform.rotation = Quaternion.Euler(0f, 0f, angle) * transform.rotation;
             sub.Launch(catapult, subVelocity);
         }
+
+        Destroy(gameObject);
     }
 }

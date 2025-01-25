@@ -10,8 +10,14 @@ public class TrajectoryPredictor : MonoBehaviour
 
     private LineRenderer lineRenderer;
 
+    public static TrajectoryPredictor instance;
+
     private void Start()
     {
+        instance = this;
+
+        gameObject.SetActive(false);
+
         lineRenderer = GetComponent<LineRenderer>();
         lineRenderer.positionCount = pointAmount;
     }

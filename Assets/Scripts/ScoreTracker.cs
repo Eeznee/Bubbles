@@ -36,6 +36,8 @@ public class ScoreTracker : MonoBehaviour
 
     public static void IncreaseScore(int points, Vector3 worldPosition)
     {
+        points *= GameSettings.multiplierBonus;
+
         currentScore += points;
 
         Vector3 screenPos = Camera.main.WorldToScreenPoint(worldPosition);
